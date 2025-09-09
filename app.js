@@ -12,6 +12,8 @@ async function buscarImagens (raca) {
     let i = 0 
     let container = document.getElementById('receber-dog')
     
+    container.replaceChildren()
+
     while(i < itens.length){
         let imagem = document.createElement('img')
         container.appendChild(imagem)
