@@ -26,6 +26,11 @@ async function buscarImagens (raca) {
 
 function carregarImagens() {
     const raca = document.getElementById('cachorros').value.toLowerCase()
+
+    if(!raca){
+        return false
+    }
+
     buscarImagens(raca)
 }
 

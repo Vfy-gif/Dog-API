@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(74, 74, 173);
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5vh;
+    position: relative;
+}
+
+input{
+    border: 0;
+    outline: 0;
+    background-color: rgb(141, 141, 141);
+    height: 45px;
+    width: 26vw;
+    text-indent: 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    transition: 0.6s;
+}
+
+input:hover{
+    background-color: rgb(110, 110, 110);
+}
+
+button{
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: 1px solid black;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 23vw; 
+    transition: 0.6s;
+}
+
+button:hover{
+    background-color: rgba(117, 68, 196, 0.753);
+}
+.buscar{
+    margin-top: -5px;
+    border-radius: 100px;
+    border: 3px solid black;
+    height: 23px;
+    width: 23px;
+}
+.line{
+    border: 2px solid black;
+    margin-top: 14px;
+    margin-left: 19px;
+    transform: rotate(135deg);
+    height: 10px;
+    background-color: black;
+}
+
+.container{
+    margin-top: 6vh;
+    display: flex;
+    flex-wrap: wrap;
+    margin-inline: 10%;
+}
+.container img{
+    height: 200px;
+    width: 20%;
+    object-fit: cover;
+    transition: 0.6s;
+}
+
+.container img:hover{
+    transform: scale(1.3);
+}

@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
     <title>DOG API</title>
 </head>
 
 <body>
-    <input type="text" id="cachorros" placeholder="Digite uma raça de cachorro">
-    <button id="buscar-dog">Buscar</button>
+    <div class="search">
+        <input type="text" id="cachorros" placeholder="Digite uma raça de cachorro">
+        <button id="buscar-dog">
+            <div class="buscar">
+                <div class="line"></div>
+            </div>
+        </button>
+    </div>
     <div class="container" id="receber-dog"></div>
 </body>
 
