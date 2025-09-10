@@ -8,6 +8,11 @@ async function buscarImagens (raca) {
     const url = `https://dog.ceo/api/breed/${raca}/images`
     const response  = await fetch(url)
     const imagens   =  await response.json()
+
+    if (imagens.status === 'error') {
+        return false
+    }
+
     const itens     = imagens.message
     let i = 0 
     let container = document.getElementById('receber-dog')
@@ -26,10 +31,6 @@ async function buscarImagens (raca) {
 
 function carregarImagens() {
     const raca = document.getElementById('cachorros').value.toLowerCase()
-
-    if(!raca){
-        return false
-    }
 
     buscarImagens(raca)
 }
