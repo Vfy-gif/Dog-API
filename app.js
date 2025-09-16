@@ -1,7 +1,7 @@
 'use strict'
 
 const botaoBuscarDog = document.getElementById('buscar-dog')
-
+const inputCachorros = document.getElementById('cachorros')
 
 /* GET do para raças de cachorros */
 async function buscarImagens (raca) {
@@ -20,10 +20,15 @@ async function buscarImagens (raca) {
     container.replaceChildren()
 
     while(i < itens.length){
+        let selectImg = document.createElement('a')
         let imagem = document.createElement('img')
-        container.appendChild(imagem)
+        selectImg.appendChild(imagem)
+        container.appendChild(selectImg)
+        
         let imagemcachorro = itens[i]
         imagem.src = imagemcachorro
+        selectImg.href = imagemcachorro
+        selectImg.target = '_blank'
         i++
     }
     return imagens.message
@@ -35,6 +40,9 @@ function carregarImagens() {
     buscarImagens(raca)
 }
 
-
-
 botaoBuscarDog.addEventListener('click', carregarImagens)
+inputCachorros.addEventListener('keydown',  function(event) {
+    if (event.key === 'Enter') {
+        carregarImagens()
+    }
+});
